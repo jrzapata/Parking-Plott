@@ -53,6 +53,7 @@ gem 'bootstrap_form'
 #Adding Gem for File Upload via Paperclip
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
+gem 'aws-sdk'
 
 
 group :development, :test do
