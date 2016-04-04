@@ -29,7 +29,10 @@
        </li>
        <% if current_user %>
        <li>
-         <a href="/vendors/<%=current_user.id%>/spots/new" class="nav-item nav-link">Create a Listing</a>
+         <a href="/vendors/spots/new" class="nav-item nav-link">Be A Vendor</a>
+      </li>
+       <li>
+         <a href="/vendors/<%= current_user.id %>/spots/new" class="nav-item nav-link">Create a Listing</a>
       </li>
       <li>
          <a href="/customers/new" class="nav-item nav-link">Reserve a spot!</a>
