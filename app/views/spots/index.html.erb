@@ -57,7 +57,7 @@ handler.buildMap({
 function(){
   markers = handler.addMarkers([
     {
-      "lat": "<%=spot.latitude%>",
+      "lat": "<%=spot.address%>",
       "lng": "<%=spot.longitude%>",
       "infowindow": "$<%=spot.price%>: <%=spot.description%>"
     }
