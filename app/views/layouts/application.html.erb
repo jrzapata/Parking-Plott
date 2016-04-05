@@ -10,7 +10,6 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,7 +19,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/about">Plott</a>
+        <a class="navbar-brand" href="/#">Plott</a>
       </div>
       <ul class="nav navbar-nav nav pull-right">
       <% if user_signed_in? %>
@@ -29,13 +28,31 @@
        </li>
        <% if current_user %>
        <li>
-         <a href="/vendors/new" class="nav-item nav-link">Be A Vendor</a>
-      </li>
-       <li>
          <a href="/vendors/<%= current_user.id %>/spots/new" class="nav-item nav-link">Create a Listing</a>
       </li>
-      <li>
-         <a href="/customers/new" class="nav-item nav-link">Reserve a spot!</a>
+       <li class="dropdown">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="/spots">My Vendor Profile
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+         <li>
+           <a href="/vendors/new" class="nav-item nav-link">Be A Vendor</a>
+         </li>
+         <li>
+           <a href="/vendors/<%=current_user.id %>/edit">Edit Vendor Profile</a>
+         </li>
+       </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="/spots">Customer Profile
+       <span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li>
+           <a href="/customers/new" class="nav-item nav-link">Customer Profile</a>
+         </li>
+         <li>
+           <a href="/customers/<%= current_user.id %>/edit">Edit Customer Profile</a>
+         </li>
+       </ul>
          <% else %>
          <% end %>
        </li>

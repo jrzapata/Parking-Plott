@@ -17,4 +17,6 @@
 <%= form.hidden_field :customer_id, :value => current_user.id %></br>
 <%= form.submit "Reserve this spot" %>
 <% end %>
+
+<%= link_to 'Delete', @spots, :method => 'delete' %>
 <% end %>

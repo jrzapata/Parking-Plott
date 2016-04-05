@@ -41,8 +41,16 @@ class SpotsController < ApplicationController
     end
   end
 
+  def destroy
+    @spots.destroy
+    redirect_to "/spots"
+  end
 
   end
+
+
+
+
 
   private
 

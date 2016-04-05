@@ -3,7 +3,7 @@ class VendorsController < ApplicationController
 
 
   def show
-    
+
   end
 
   def new
@@ -16,6 +16,9 @@ class VendorsController < ApplicationController
     redirect_to("/")
   end
 
+  def edit
+    
+  end
 
 
   private

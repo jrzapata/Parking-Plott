@@ -1,0 +1,13 @@
+<div class="container">
+<h2>Edit Your Vendor Profile</h2>
+<%= bootstrap_form_for @vendor do |form| %>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <%= form.text_field :first_name, label: "First Name" %></br>
+      <%= form.text_field :last_name, label:"Last Name" %></br>
+      <%= form.hidden_field :id, :value => current_user.id %>
+      <%= form.submit %>
+    </div>
+  </div>
+</div>
+<% end %>
