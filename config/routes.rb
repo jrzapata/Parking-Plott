@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   root "spots#index"
 
-  get "/no_access", to: "spots#no_access"
+  get "/spots/myspots", to: "spots#myspots"
 
   # get 'customers/:customer_id/spots/:id' => 'spots#update'
 end

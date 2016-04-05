@@ -6,11 +6,14 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @spots = Spot.all
+    @spots = Spot.find(params[:id])
   end
 
   def new
     @customer = Customer.new
+  end
+
+  def edit
   end
 
   def create
@@ -20,7 +23,6 @@ class CustomersController < ApplicationController
   end
 
   def update
-
 
   end
 

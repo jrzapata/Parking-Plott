@@ -32,11 +32,11 @@ class SpotsController < ApplicationController
   end
 
   def update
-    customer = Customer.find(params[:customer_id].to_i)
+    @customer = Customer.find(params[:customer_id].to_i)
     @spots.update(available: false)
 
     if @spots.save
-        customer.spots << @spots
+        @customer.spots << @spots
         redirect_to "/spots"
     end
   end
@@ -44,6 +44,11 @@ class SpotsController < ApplicationController
   def destroy
     @spots.destroy
     redirect_to "/spots"
+  end
+
+
+  def myspots
+    @spots = Spot.find(params[:id])
   end
 
   end

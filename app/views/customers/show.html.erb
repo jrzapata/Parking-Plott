@@ -1,3 +1,6 @@
+<h1>My Customer Account</h1>
+
+<h2>My Customer Information</h2>
 <p>
   <%= @customer.first_name %>
   <%= @customer.last_name %>
@@ -7,15 +10,16 @@
 
 
 
-this is the show page
+<h2>My Reserved Spots</h2>
+<% @customer.spots.each do |spots| %>
+  <%= spots.address %>
+  <%= spots.zipcode %>
+  <%= spots.price %>
+  <%= spots.description %>
 
-<p>
-
-<% @spots.each do |spot| %>
-  <a href="/customers/<%= @customer.id %>/spots/<%=spot.id %>"><%= spot.address%>
-  <%= spot.zipcode %>
-  <%= spot.price %>
-  <%= spot.description %></a>
-</p>
-
+  <%= form_for [@spots, @customer], url: customer_path do |form| %>
+  <%= form.hidden_field :available, :value => true %></br>
+  <%= form.hidden_field :customer_id, :value => nil %></br>
+  <%= form.submit "Cancel reservation of spot" %>
+  <% end %>
 <% end %>
