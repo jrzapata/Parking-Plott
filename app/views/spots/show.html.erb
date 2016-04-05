@@ -1,22 +1,28 @@
-<p>
-  <%= @spots.address%>
-  <%= @spots.zipcode %>
-  <%= @spots.price %>
-  <%= @spots.description %>
-</p>
-<img src="<%= @spots.image %>" alt="" />
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>This listing</h1>
+      <p><%= @spots.address%></p>
+      <p>  <%= @spots.zipcode %></p>
+      <p>  <%= @spots.price %></p>
+      <p>  <%= @spots.description %></p>
+      <% if !current_user%>
+      <p>
+        Log in or sign up to reserve this spot
+      </p>
+      <% else %>
+      <%= form_for [@customer, @spots], url: customer_spot_path do |form| %>
+      <%= form.hidden_field :available, :value => false %></br>
+      <%= form.hidden_field :customer_id, :value => current_user.id %></br>
+      <%= form.submit "Reserve this spot" %>
+      <% end %>
 
+      <%= link_to 'Delete', @spots, :method => 'delete' %>
+      <% end %>
+    </div>
+    <div class="col-md-8">
+      <img src="<%= @spots.image %>" alt="" />
+    </div>
 
-<% if !current_user%>
-<p>
-  Log in or sign up to reserve this spot
-</p>
-<% else %>
-<%= form_for [@customer, @spots], url: customer_spot_path do |form| %>
-<%= form.hidden_field :available, :value => false %></br>
-<%= form.hidden_field :customer_id, :value => current_user.id %></br>
-<%= form.submit "Reserve this spot" %>
-<% end %>
-
-<%= link_to 'Delete', @spots, :method => 'delete' %>
-<% end %>
+    </div>
+</div>
