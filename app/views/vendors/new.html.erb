@@ -1,9 +1,12 @@
-<h1>Form Page for Vendor</h1>
-<h2><%=current_user.id%></h2>
+<h1>Vendor Customer Form</h1>
+<p>
+  Fill in information to start renting your spot!
+</p>
 
-<%= form_for @vendor do |form| %>
-  First Name: <%= form.text_field :first_name %></br>
-  Last Name: <%= form.text_field :last_name %></br>
+
+<%= bootstrap_form_for @vendor do |form| %>
+  <%= form.text_field :first_name, label: "First Name" %></br>
+  <%= form.text_field :last_name, label: "Last Name" %></br>
   <%= form.hidden_field :id, :value => current_user.id %>
   <%= form.submit %>
 <% end %>
