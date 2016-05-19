@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require underscore-min.js
 //= require gmaps/google
+//= require markerclusterer

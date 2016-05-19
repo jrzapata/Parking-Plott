@@ -96,6 +96,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    markerclustererplus-rails (2.1.2)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
@@ -199,6 +200,7 @@ DEPENDENCIES
   gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
+  markerclustererplus-rails
   paperclip (~> 4.3, >= 4.3.6)
   pg (~> 0.15)
   rails (= 4.2.6)

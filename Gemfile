@@ -49,6 +49,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 
 gem 'bootstrap_form'
 
+gem 'markerclustererplus-rails'
 
 #Adding Gem for File Upload via Paperclip
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
