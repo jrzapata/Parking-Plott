@@ -1,28 +1,32 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Urban Yoda Translator
 
-Things you may want to cover:
+###Description
 
-* Ruby version
+This is a web app that let users list, browse and reserve(beta) private parking spots in NYC.
 
-* System dependencies
+###Tech used / Stack
 
-* Configuration
+- Ruby
 
-* Database creation
+- Rails
 
-* Database initialization
+- JavaScript
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Postgres
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+###Features
+
+- User can list a private parking spot with the app.
+
+- User can browse all available spots in the NYC areas.
+
+- User can reserve a spot with the app.
+
+
+### Future Implementations
+
+- Better email actions. 
