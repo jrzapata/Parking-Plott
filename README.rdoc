@@ -1,12 +1,12 @@
 == README
 
-##Urban Yoda Translator
+Urban Yoda Translator
 
-###Description
+Description
 
 This is a web app that let users list, browse and reserve(beta) private parking spots in NYC.
 
-###Tech used / Stack
+Tech used / Stack
 
 - Ruby
 
@@ -18,7 +18,7 @@ This is a web app that let users list, browse and reserve(beta) private parking 
 
 
 
-###Features
+Features
 
 - User can list a private parking spot with the app.
 
@@ -27,6 +27,6 @@ This is a web app that let users list, browse and reserve(beta) private parking 
 - User can reserve a spot with the app.
 
 
-### Future Implementations
+Future Implementations
 
-- Better email actions. 
+- Better email actions.
